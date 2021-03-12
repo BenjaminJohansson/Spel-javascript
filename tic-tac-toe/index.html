@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+
+
+    
+    <div class='game'></div>
+
+    <script src="js/tic-tac-toe.js"></script>
+    <script>
+        tic_tac_toe.init( document.querySelector('.game') );
+        tic_tac_toe.start();
+    </script>
+    
+
+    <button class="btn" onclick="myFunction()">Meny</button>
+    
+    <div id="myDIV">
+      <form>
+      <h1>Tic Tac Toe</h1>
+      <h2>Antal spelare:</h2>
+
+      <input id = 'one' type="radio" name = 'player' value = 'One' checked>
+          <label for="one"> One Player</label>
+      <input id = 'two' type="radio" name = 'player' value = 'Two'>
+          <label for="two"> Two Player</label>
+
+      <h2>Välj symbol: X / O</h2>
+
+      <input id = 'X' type="radio" name = 'token' value = 'X' checked>
+          <label for="X"> X</label>
+        <input id = 'O' type="radio" name = 'token' value = 'O' checked>
+          <label for="O"> O</label>
+
+      <h2>Svårgihetsgrad vid singleplayer:</h2>
+      <input id = 'easy' type="radio" name = 'diff'  value = 'Easy' checked>
+        <label for="easy">Easy</label>
+        <input id = 'hard' type="radio" name = 'diff' value = 'Hard'>
+        <label for="hard">Hard</label><br>
+
+      <button id='btnsubmit' class="btn" type="submit" onclick=" tic_tac_toe.getData(), tic_tac_toe.restart()" title="Välj">Ändra data</button> 
+      <button id='btnsubmit' class="btn" type="submit" onclick="tic_tac_toe.restart()" title="Restart this game">Restart</button> 
+      </form>
+    </div>
+
+    
+</body>
+</html>
